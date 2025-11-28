@@ -1,30 +1,111 @@
-import React from "react";
-import { projects , seo } from "@/data/data";
+"use client";
 
-export const metadata = {
-    title: `Projects | ${seo.title}`,
-    description: "Explore a curated collection of web development projects built with Next.js, React, and modern web technologies.",
-    keywords: "projects, web development, Next.js, React, JavaScript, portfolio"
+import React from "react";
+import { projects, seo } from "@/data/data";
+import { motion } from "motion/react";
+
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.08,
+            delayChildren: 0.1
+        }
+    }
+};
+
+const headerVariants = {
+    hidden: { 
+        opacity: 0, 
+        x: -20,
+        filter: "blur(4px)"
+    },
+    visible: { 
+        opacity: 1, 
+        x: 0,
+        filter: "blur(0px)",
+        transition: {
+            duration: 0.7,
+            ease: [0.22, 1, 0.36, 1]
+        }
+    }
+};
+
+const itemVariants = {
+    hidden: { 
+        opacity: 0
+    },
+    visible: { 
+        opacity: 1,
+        transition: {
+            duration: 0.4,
+            ease: [0.22, 1, 0.36, 1]
+        }
+    }
+};
+
+const contentVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.08
+        }
+    }
+};
+
+const contentItemVariants = {
+    hidden: { 
+        opacity: 0, 
+        x: -20
+    },
+    visible: { 
+        opacity: 1, 
+        x: 0,
+        transition: {
+            duration: 0.4,
+            ease: [0.22, 1, 0.36, 1]
+        }
+    }
 };
 
 function Projects() {
     return (
         <div className="md:w-[700px] w-[100%] mt-5 p-4">
-            <main className="flex flex-col gap-2">
-                <h1 className="text-xl font-medium before:content-['>'] before:mr-1">
+            <motion.main 
+                className="flex flex-col gap-2"
+                initial="hidden"
+                animate="visible"
+                variants={containerVariants}
+            >
+                <motion.h1 
+                    className="text-xl font-medium before:content-['>'] before:mr-1"
+                    variants={headerVariants}
+                >
                     All Projects
-                </h1>
+                </motion.h1>
                 <div className="flex flex-col gap-2">
                     {projects.pinProjects.map((item, index) => (
-                        <a
+                        <motion.a
                             href={item.link}
                             key={index}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group cursor-pointer p-4 border-2 border-base-content/20 hover:border-base-content/80 rounded-2xl hover:scale-102 transition-transform duration-200"
+                            variants={itemVariants}
                         >
-                            <div className="flex flex-col gap-2 justify-between">
-                                <div className="flex items-center justify-between">
+                            <motion.div 
+                                className="flex flex-col gap-2 justify-between"
+                                variants={contentVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.3 }}
+                            >
+                                <motion.div 
+                                    className="flex items-center justify-between"
+                                    variants={contentItemVariants}
+                                >
                                     <h2 className="font-semibold text-lg">
                                         {item.title}
                                     </h2>
@@ -41,11 +122,17 @@ function Projects() {
                                     >
                                         <path d="M10 6L10 8 22.59 8 6 24.59 7.41 26 24 9.41 24 22 26 22 26 6 10 6z"></path>
                                     </svg>
-                                </div>
-                                <p className="text-base-content/80 text-sm sm:text-base">
+                                </motion.div>
+                                <motion.p 
+                                    className="text-base-content/80 text-sm sm:text-base"
+                                    variants={contentItemVariants}
+                                >
                                     {item.description}
-                                </p>
-                                <div className="flex items-center flex-wrap gap-2 mt-1">
+                                </motion.p>
+                                <motion.div 
+                                    className="flex items-center flex-wrap gap-2 mt-1"
+                                    variants={contentItemVariants}
+                                >
                                     {item.tags.map((tag, idx) => (
                                         <span
                                             key={idx}
@@ -54,20 +141,30 @@ function Projects() {
                                             {tag}
                                         </span>
                                     ))}
-                                </div>
-                            </div>
-                        </a>
+                                </motion.div>
+                            </motion.div>
+                        </motion.a>
                     ))}
                     {projects.otherProjects.map((item, index) => (
-                        <a
+                        <motion.a
                             href={item.link}
                             key={index}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group cursor-pointer p-4 border-2 border-base-content/20 hover:border-base-content/80 rounded-2xl hover:scale-102 transition-transform duration-200"
+                            variants={itemVariants}
                         >
-                            <div className="flex flex-col gap-2 justify-between">
-                                <div className="flex items-center justify-between">
+                            <motion.div 
+                                className="flex flex-col gap-2 justify-between"
+                                variants={contentVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.3 }}
+                            >
+                                <motion.div 
+                                    className="flex items-center justify-between"
+                                    variants={contentItemVariants}
+                                >
                                     <h2 className="font-semibold text-lg">
                                         {item.title}
                                     </h2>
@@ -84,11 +181,17 @@ function Projects() {
                                     >
                                         <path d="M10 6L10 8 22.59 8 6 24.59 7.41 26 24 9.41 24 22 26 22 26 6 10 6z"></path>
                                     </svg>
-                                </div>
-                                <p className="text-base-content/80 text-sm sm:text-base">
+                                </motion.div>
+                                <motion.p 
+                                    className="text-base-content/80 text-sm sm:text-base"
+                                    variants={contentItemVariants}
+                                >
                                     {item.description}
-                                </p>
-                                <div className="flex items-center flex-wrap gap-2 mt-1">
+                                </motion.p>
+                                <motion.div 
+                                    className="flex items-center flex-wrap gap-2 mt-1"
+                                    variants={contentItemVariants}
+                                >
                                     {item.tags.map((tag, idx) => (
                                         <span
                                             key={idx}
@@ -97,12 +200,12 @@ function Projects() {
                                             {tag}
                                         </span>
                                     ))}
-                                </div>
-                            </div>
-                        </a>
+                                </motion.div>
+                            </motion.div>
+                        </motion.a>
                     ))}
                 </div>
-            </main>
+            </motion.main>
         </div>
     );
 }
