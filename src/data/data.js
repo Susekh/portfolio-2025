@@ -51,11 +51,11 @@ export const projects = {
 
   otherProjects: [
     {
-      title: "Blockchain-Based IoT Security",
+      title: "SpotMate",
       description:
-        "A blockchain-powered IoT data integrity solution developed for the BPUT Hackathon 2025, enabling tamper-proof data exchange across distributed IoT devices.",
-      tags: ["Blockchain", "Node.js", "IoT", "Security"],
-      link: "",
+        "A location-based social platform to explore and share top local hangout spots. Includes authentication, reviews, and interactive map UI.",
+      tags: ["React", "Node.js", "MongoDB", "Express", "Map API", "Tailwind"],
+      link: "https://spotmate.example.com",
     },
     {
       title: "Portfolio v2",
@@ -63,13 +63,6 @@ export const projects = {
         "A clean, modern, minimal portfolio built with Next.js and Tailwind CSS. Features smooth animations, SEO optimization, and a fast, responsive design.",
       tags: ["Next.js", "Tailwind", "React", "Framer Motion"],
       link: "https://portfolio.khilar.me",
-    },
-    {
-      title: "E-Commerce Store (Full-Stack)",
-      description:
-        "A full-stack e-commerce application with product listings, cart logic, authentication, and secure API architecture. Optimized for performance and clean UI.",
-      tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind"],
-      link: "",
     },
   ],
 };
@@ -79,7 +72,7 @@ export const experience = [
   {
     title: "Intern - Fixxlink Pvt Ltd",
     description:
-      "Built a responsive, SEO optimized client website that ranked in the top 3 Google results, configured Hostinger VPS with NGINX + HTTPS for 40% faster load times, and integrated ML based backend APIs for smooth and secure data flow.",
+      "Built a responsive, SEO optimized client website, configured Hostinger VPS with NGINX + HTTPS for 40% faster load times, and integrated ML based backend APIs for smooth and secure data flow.",
     date: "2024",
   },
   {
