@@ -95,7 +95,7 @@ export const experience = [
     title: "Campus Project - Trident Academy of Technology",
     description:
       "Developed a scalable online test platform using Next.js and Redis with instant question retrieval and session handling, achieving zero downtime and supporting 600+ concurrent students during live examinations.",
-    date: "2025",
+    date: "2026",
   },
 ];
 
