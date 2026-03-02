@@ -1,34 +1,36 @@
 export const about = {
-    name: "Subhranshu Sekhar Khilar",
-    role: "FullStack dev",
-    about: "Full Stack developer working across Next.js, React, scalable API architecture, and cloud deployments. I craft clean, high-performance applications that boast modern UI/UX, optimized backend workflows, and a heavy focus on reliability and technical precision to deliver fast and professional digital experiences.",
-    email: "subhranshukhilar@gmail.com",
+  name: "Subhranshu Sekhar Khilar",
+  role: "FullStack dev",
+  about:
+    "Full Stack developer working across Next.js, React, scalable API architecture, and cloud deployments. I craft clean, high-performance applications that boast modern UI/UX, optimized backend workflows, and a heavy focus on reliability and technical precision to deliver fast and professional digital experiences.",
+  email: "subhranshukhilar@gmail.com",
 };
 
 export const seo = {
-    title: `${about.name} | ${about.role}`,
-    description: "Subhranshu's Portfolio",
-    keywords: "portfolio, web developer, Next.js, developer portfolio, minimal portfolio",
-}
+  title: `${about.name} | ${about.role}`,
+  description: "Subhranshu's Portfolio",
+  keywords:
+    "portfolio, web developer, Next.js, developer portfolio, minimal portfolio",
+};
 
 export const forms = {
-    formspreeUrl: process.env.NEXT_PUBLIC_FORMSPREE_URI,
-}
+  formspreeUrl: process.env.NEXT_PUBLIC_FORMSPREE_URI,
+};
 
 export const skills = [
-    { name: "Html", alt: "html logo", icon: "/html.svg" },
-    { name: "Css", alt: "css logo", icon: "/css.svg" },
-    { name: "Js", alt: "js logo", icon: "/js.svg" },
-    { name: "Tailwind", alt: "tailwind logo", icon: "/tailwind.svg" },
-    { name: "React Js", alt: "react logo", icon: "/react.svg" },
-    { name: "Next Js", alt: "nextjs logo", icon: "/nextjs.svg" },
+  { name: "Html", alt: "html logo", icon: "/html.svg" },
+  { name: "Css", alt: "css logo", icon: "/css.svg" },
+  { name: "Js", alt: "js logo", icon: "/js.svg" },
+  { name: "Tailwind", alt: "tailwind logo", icon: "/tailwind.svg" },
+  { name: "React Js", alt: "react logo", icon: "/react.svg" },
+  { name: "Next Js", alt: "nextjs logo", icon: "/nextjs.svg" },
 ];
 
 export const socials = {
-    github: "https://github.com/Susekh",
-    twitter: "https://twitter.com/subhkhilar",
-    instagram: "https://www.instagram.com/subh.khilar",
-    linkedIn : "https://www.linkedin.com/in/subhkhilar"
+  github: "https://github.com/Susekh",
+  twitter: "https://twitter.com/subhkhilar",
+  instagram: "https://www.instagram.com/subh.khilar",
+  linkedIn: "https://www.linkedin.com/in/subhkhilar",
 };
 
 export const projects = {
@@ -37,25 +39,40 @@ export const projects = {
       title: "TaskNet",
       description:
         "A full-stack task management platform with sprint planning, real-time chat, role-based access control, and Razorpay payments. Deployed on AWS EC2 with CI/CD and NGINX for 99.9% uptime.",
-      tags: ["React", "Node.js", "Express", "Prisma", "PostgreSQL", "AWS EC2", "Tailwind"],
+      tags: [
+        "React",
+        "Node.js",
+        "Express",
+        "Prisma",
+        "PostgreSQL",
+        "AWS EC2",
+        "Tailwind",
+      ],
       link: "https://tasknet.susekh.tech",
     },
-    {
-      title: "Find Waldo",
-      description:
-        "An interactive image-tagging game where users locate characters in crowd scenes. Powered by AWS Lambda & API Gateway with automated CI/CD via GitHub Actions.",
-      tags: ["React", "Node.js", "MongoDB", "Mongoose", "AWS Lambda", "Tailwind"],
-      link: "https://find-waldo.khilar.me",
-    }
-  ],
-
-  otherProjects: [
     {
       title: "SpotMate",
       description:
         "A location-based social platform to explore and share top local hangout spots. Includes authentication, reviews, and interactive map UI.",
       tags: ["React", "Node.js", "MongoDB", "Express", "Map API", "Tailwind"],
-      link: "https://spotmate.example.com",
+      link: "https://spotmate.khilar.me/",
+    },
+  ],
+
+  otherProjects: [
+    {
+      title: "Find Waldo",
+      description:
+        "An interactive image-tagging game where users locate characters in crowd scenes. Powered by AWS Lambda & API Gateway with automated CI/CD via GitHub Actions.",
+      tags: [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Mongoose",
+        "AWS Lambda",
+        "Tailwind",
+      ],
+      link: "https://find-waldo.khilar.me",
     },
     {
       title: "Portfolio v2",
@@ -66,7 +83,6 @@ export const projects = {
     },
   ],
 };
-
 
 export const experience = [
   {
@@ -83,21 +99,32 @@ export const experience = [
   },
 ];
 
-
 export const blogs = [
-    {
-        title: "Understanding React Hooks",
-        date: "12/03/2025",
-        link: "#",
-    },
-    {
-        title: "CSS Grid vs Flexbox: When to Use Which",
-        date: "25/12/2024",
-        link: "#",
-    },
-    {
-        title: "Next.js SEO Best Practices",
-        date: "10/07/2024",
-        link: "#",
-    },
+  {
+    title: "Product-Focused Frontend Engineering",
+    details:
+      "Building high-performance, production-grade UIs with advanced animations and responsive UX for real users.",
+    skills: [
+      "React (SPA development)",
+      "Next.js (SSR + SEO optimization)",
+      "Framer Motion (micro-interactions)",
+      "Tailwind CSS (scalable design system)",
+      "Custom component architecture",
+      "Accessibility & responsiveness",
+    ],
+  },
+  {
+    title: "Full-Stack & Cloud Implementation",
+    details:
+      "Delivering fully deployed services with secure auth, CI/CD pipelines, and optimized databases on AWS.",
+    skills: [
+      "Node.js + Express APIs",
+      "Prisma ORM & PostgreSQL",
+      "MongoDB (Mongoose)",
+      "AWS EC2 deployment with NGINX",
+      "AWS Lambda & API Gateway",
+      "GitHub Actions (Automated CI/CD)",
+      "Role-based auth & secure APIs",
+    ],
+  },
 ];
