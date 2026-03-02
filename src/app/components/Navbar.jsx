@@ -189,7 +189,7 @@ export default function Navbar() {
                                                 <span className="absolute left-2 sm:left-0 bottom-1 sm:bottom-0 w-0 h-[2px] bg-current transition-all duration-300 ease-out group-hover:w-[calc(100%-1rem)] sm:group-hover:w-full"></span>
                                             </Link>
                                         </motion.li>
-                                        <motion.li 
+                                        {/* <motion.li 
                                             className="w-full sm:w-auto block sm:hidden"
                                             variants={menuItemVariants}
                                         >
@@ -201,7 +201,7 @@ export default function Navbar() {
                                                 {blogs ? "Home" : "Blogs"}
                                                 <span className="absolute left-2 sm:left-0 bottom-1 sm:bottom-0 w-0 h-[2px] bg-current transition-all duration-300 ease-out group-hover:w-[calc(100%-1rem)] sm:group-hover:w-full"></span>
                                             </Link>
-                                        </motion.li>
+                                        </motion.li> */}
                                     </motion.ul>
                                 )}
                             </AnimatePresence>
