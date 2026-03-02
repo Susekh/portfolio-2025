@@ -246,13 +246,13 @@ export default function Navbar() {
                                 </li>
                             </ul>
 
-                            <Link
+                            {/* <Link
                                 href="/blogs"
                                 className="relative hidden sm:block group"
                             >
                                 Blogs
                                 <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-current transition-all duration-300 ease-out group-hover:w-full"></span>
-                            </Link>
+                            </Link> */}
                         </div>
                         <div className="flex items-center gap-2">
                             <motion.button
